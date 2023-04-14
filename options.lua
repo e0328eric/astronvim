@@ -1,12 +1,39 @@
 -- set vim options here (vim.<first_key>.<second_key> = value)
 return {
   opt = {
-    -- set to true or false etc.
-    relativenumber = true, -- sets vim.opt.relativenumber
-    number = true, -- sets vim.opt.number
-    spell = false, -- sets vim.opt.spell
-    signcolumn = "auto", -- sets vim.opt.signcolumn to auto
-    wrap = false, -- sets vim.opt.wrap
+    autoindent = true,
+    autoread = true,
+    clipboard = "unnamedplus",
+    colorcolumn = "100",
+    encoding = "utf-8",
+    expandtab = true,
+    foldenable = false,
+    foldmethod = "manual",
+    guifont = "-misc-fixed-medium-r-normal-*-18-120-100-100-c-90-iso10646-1",
+    guifontwide = "-misc-fixed-medium-r-normal-*-18-120-100-100-c-180-iso10646-1",
+    hidden = true,
+    hlsearch = true,
+    laststatus = 3,
+    mouse = "a",
+    nu = true,
+    rnu = true,
+    ruler = true,
+    scrolloff = 3,
+    shiftwidth = 4,
+    showmode = false,
+    signcolumn = "yes",
+    smartindent = true,
+    smarttab = true,
+    splitbelow = true,
+    splitright = true,
+    swapfile = false,
+    tabstop = 4,
+    termguicolors = true,
+    title = true,
+    undofile = true,
+    undodir = os.getenv "HOME" .. "/.cache/nvim/undo",
+    undolevels = 100,
+    undoreload = 1000,
   },
   g = {
     mapleader = " ", -- sets vim.g.mapleader
