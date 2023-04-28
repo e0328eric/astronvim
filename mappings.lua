@@ -35,7 +35,7 @@ return {
     ["<C-\\>"] = { "O" },
   },
   i = {
-    ["<C-\\>"] = { "O" },
+    ["<C-\\>"] = { "<C-[>O" },
   },
   t = {
     -- setting a mapping to false will disable it
