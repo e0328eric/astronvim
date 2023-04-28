@@ -251,5 +251,45 @@ return {
         )
       ),
     })
+
+    ls.add_snippets("meson", {
+      s(
+        { trig = "__mesoninit", snippetType = "autosnippet" },
+        fmt(
+          [[
+        project('{project_name}',
+          'cpp',
+          license: 'MIT',
+          version: '{project_version}',
+          default_options: [
+            'c_std=11',
+            'cpp_std=c++20',
+            'warning_level=1',
+          ])
+
+        sources = files(
+          'src/main.cc',
+        )
+
+        # dependencies
+        fmt_proj = subproject('fmt')
+        fmt_dep = fmt_proj.get_variable('fmt_dep')
+
+        executable('{project_name}', sources,
+          include_directories: [
+            './src',
+          ],
+          dependencies: [
+            fmt_dep,
+          ])
+        ]],
+          {
+            project_name = i(1),
+            project_version = i(2),
+          },
+          { repeat_duplicates = true }
+        )
+      ),
+    })
   end,
 }

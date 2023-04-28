@@ -26,7 +26,18 @@ return {
       disabled = {},
       timeout_ms = 1000,
     },
-    servers = {},
+    servers = {
+      "typst_lsp",
+    },
+    config = {
+      typst_lsp = function()
+        return {
+          cmd = { "typst-lsp" },
+          filetypes = { "typst" },
+          root_dir = require("lspconfig.util").root_pattern "main.typ",
+        }
+      end,
+    },
   },
   lazy = {
     defaults = { lazy = true },
