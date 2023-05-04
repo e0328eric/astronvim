@@ -13,6 +13,11 @@ return {
       enable_autosnippets = true,
     }
 
+    ls.add_snippets("typst", {
+      s({ trig = "MK", snippetType = "autosnippet" }, { t "$", i(1), t "$", i(0) }),
+      s("be", { t { "$", "    " }, i(1), t { "", "$", "" }, i(0) }),
+    })
+
     ls.add_snippets("plaintex", {
       s({ trig = "MK", snippetType = "autosnippet" }, { t "$", i(1), t "$", i(0) }),
       s("be", { t { "\\[", "    " }, i(1), t { "", "\\]", "" }, i(0) }),
